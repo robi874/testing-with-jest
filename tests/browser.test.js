@@ -33,3 +33,14 @@ describe('Clicking "Pusha till stacken"', () => {
 	});
 });
 
+test("the stack should have the correct element at the top after pushing it to the stack", async () =>
+{
+    let push = await driver.findElement(By.id('push'));
+	await push.click();
+    let alert = await driver.switchTo().alert();
+	await alert.sendKeys("xd");
+	await alert.accept();
+    let stack = await driver.findElement(By.id('top_of_stack')).getText();
+    expect(stack).toEqual(2);
+});
+
