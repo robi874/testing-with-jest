@@ -41,6 +41,6 @@ test("the stack should have the correct element at the top after pushing it to t
 	await alert.sendKeys("xd");
 	await alert.accept();
     let stack = await driver.findElement(By.id('top_of_stack')).getText();
-    expect(stack).toEqual(2);
+    expect(stack).toEqual("xd");
 });
 
