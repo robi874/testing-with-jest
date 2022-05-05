@@ -23,6 +23,6 @@ test('peek on stack with one or more elements after popping returns the next top
     stack.push(2);
     stack.push("xd");
     stack.pop();
-    expect(stack.peek().toBeDefined());
-    expect(stack.peek().toBe("xd"));
+    expect(stack.peek()).toBeDefined();
+    expect(stack.peek()).toBe("xd");
 });
